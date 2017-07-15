@@ -12,13 +12,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Gesture
 import 'hammerjs';
 import { ButtonComponent } from './button/button.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		ButtonComponent
+		ButtonComponent,
+		CheckboxComponent
 	],
 	imports: [
 		BrowserModule,

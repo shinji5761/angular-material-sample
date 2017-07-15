@@ -1,0 +1,7 @@
+<md-checkbox [(ngModel)]="button.disable" (change)="onCahngeEvent()">同意する</md-checkbox>
+<button md-raised-button [disabled]="!button.disable">次へ</button>
+<br>
+<md-checkbox [align]="align">align</md-checkbox>
+<br>
+<md-checkbox [indeterminate]="indeterminate" (indeterminateChange)="onChangeIndeterminateEvent()">indeterminate</md-checkbox>
+<br>
