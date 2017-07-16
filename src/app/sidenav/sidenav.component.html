@@ -1,0 +1,39 @@
+<md-sidenav-container style="height : 100px">
+	<button md-raised-button type="button" md-button (click)="sidenav_over.open()">
+		Over
+	</button>
+	<md-sidenav #sidenav_over style="padding : 25px" mode="over"
+			(open-start)="onOpenStartEvent($event)"
+			(open)="onOpenEvent($event)"
+			(close-start)="onCloseStartEvent($event)"
+			(close)="onCloseEvent($event)">
+		<button md-button>button</button>
+		<br>
+		<button md-button>checkbox</button>
+	</md-sidenav>
+</md-sidenav-container>
+
+<md-sidenav-container style="height : 100px" (backdropClick)="onBackdropClickEvent()">
+	<button md-raised-button type="button" md-button (click)="sidenav_push.open()">
+		Push
+	</button>
+	<md-sidenav #sidenav_push style="padding : 25px" mode="push">
+		<button md-button>button</button>
+		<br>
+		<button md-button>checkbox</button>
+	</md-sidenav>
+</md-sidenav-container>
+
+<md-sidenav-container style="height : 100px">
+	<button md-raised-button type="button" md-button (click)="sidenav_side.open()">
+		Side Open
+	</button>
+	<button md-raised-button type="button" md-button (click)="sidenav_side.close()">
+		Side Close
+	</button>
+	<md-sidenav #sidenav_side style="padding : 25px" mode="side" opened="true">
+		<button md-button>button</button>
+		<br>
+		<button md-button>checkbox</button>
+	</md-sidenav>
+</md-sidenav-container>

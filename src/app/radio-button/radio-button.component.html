@@ -1,0 +1,38 @@
+<md-radio-group>
+	<md-radio-button value="1">Option 1</md-radio-button>
+	<md-radio-button value="2">Option 2</md-radio-button>
+</md-radio-group>
+
+<br>
+<br>
+
+
+<md-radio-group >
+	<md-radio-button checked="true" value="1">Checked True</md-radio-button>
+	<md-radio-button value="2">Checked False</md-radio-button>
+</md-radio-group>
+
+<br>
+<br>
+
+<md-radio-group >
+	<md-radio-button align="start" value="1">Align Start</md-radio-button>
+	<md-radio-button align="end" value="2">Align End</md-radio-button>
+</md-radio-group>
+
+<br>
+<br>
+
+<md-radio-group>
+	<md-radio-button disabled="true"  value="1">Disabled True</md-radio-button>
+	<md-radio-button disabled="false" value="2">Disabled False</md-radio-button>
+</md-radio-group>
+
+<br>
+<br>
+
+<md-checkbox [(ngModel)]="radioState">非活性</md-checkbox>
+
+<md-radio-group [disabled]="radioState" (change)="onChangeRadioGroup()">
+	<md-radio-button *ngFor="let button of group" [checked]="selectedRadioButton == button.value" [value]="button.value" (change)="onChangeRadio(button.value)">{{button.name}}</md-radio-button>
+</md-radio-group>
