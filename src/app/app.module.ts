@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Material
 import {
@@ -13,7 +13,9 @@ import {
 	MdRadioModule,
 	MdInputModule,
 	MdNativeDateModule,
-	MdDatepickerModule
+	MdDatepickerModule,
+	MdIconModule,
+	MD_PLACEHOLDER_GLOBAL_OPTIONS
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -48,9 +50,13 @@ import { InputComponent } from './input/input.component';
 		MdNativeDateModule,
 		MdDatepickerModule,
 		FormsModule,
+		ReactiveFormsModule,
+		MdIconModule,
 		BrowserAnimationsModule
 	],
-	providers: [],
+	providers: [
+		{provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'always' }}
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
