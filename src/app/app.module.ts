@@ -55,7 +55,7 @@ import { InputComponent } from './input/input.component';
 		BrowserAnimationsModule
 	],
 	providers: [
-		{provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'always' }}
+		{provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'all' }}
 	],
 	bootstrap: [AppComponent]
 })

@@ -1,12 +1,23 @@
+<!-- デートピッカー -->
 <md-input-container>
-  <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-  <button mdSuffix [mdDatepickerToggle]="picker"></button>
+	<input
+		mdInput
+		placeholder="日付を入力してください..."
+		[mdDatepicker]="myDatePicker"
+		[mdDatepickerFilter]="datepicker.filter"
+		[min]="datepicker.min"
+		[max]="datepicker.max"
+		[(ngModel)]="datepicker.model"/>
+	<button mdSuffix [mdDatepickerToggle]="myDatePicker"></button>
 </md-input-container>
-<md-datepicker #picker></md-datepicker>
+<md-datepicker #myDatePicker [startAt]="datepicker.min" (selectedChanged)="changeDatePicker()"></md-datepicker>
 
+<br>
 
+<!-- タッチインターフェース -->
 <md-input-container>
-	<input mdInput [mdDatepicker]="piker2" placeholder="日付が入力されていません..." />
+	<input mdInput [mdDatepicker]="pickerTouch"/>
+	<button mdSuffix [mdDatepickerToggle]="pickerTouch"></button>
 </md-input-container>
-
-<md-datepicker #picker2></md-datepicker>
+<md-datepicker #pickerTouch touchUi="true"></md-datepicker>
+<button md-raised-button (click)="pickerTouch.open()">Open</button>
