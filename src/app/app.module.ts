@@ -14,6 +14,8 @@ import {
 	MdInputModule,
 	MdNativeDateModule,
 	MdDatepickerModule,
+	MdSelectModule,
+	MdSliderModule,
 	MdIconModule,
 	MD_PLACEHOLDER_GLOBAL_OPTIONS
 } from '@angular/material';
@@ -27,6 +29,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { InputComponent } from './input/input.component';
+import { SelectComponent } from './select/select/select.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 @NgModule({
@@ -38,7 +42,9 @@ import { InputComponent } from './input/input.component';
 		RadioButtonComponent,
 		DatepickerComponent,
 		SidenavComponent,
-		InputComponent
+		InputComponent,
+		SelectComponent,
+		SliderComponent
 	],
 	imports: [
 		BrowserModule,
@@ -49,6 +55,8 @@ import { InputComponent } from './input/input.component';
 		MdInputModule,
 		MdNativeDateModule,
 		MdDatepickerModule,
+		MdSelectModule,
+		MdSliderModule,
 		FormsModule,
 		ReactiveFormsModule,
 		MdIconModule,

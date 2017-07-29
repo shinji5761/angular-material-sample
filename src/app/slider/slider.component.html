@@ -1,0 +1,30 @@
+<md-slider></md-slider>
+
+<br><br>
+
+<md-slider vertical></md-slider>
+
+<br><br>
+
+<md-slider invert></md-slider>
+
+<br><br>
+
+<md-slider min="1" max="10" value="10" step="0.1" tickInterval="10" (change)="onChange($event)" (input)="onInput($event)"></md-slider>
+
+<br><br>
+
+<md-slider
+	[(ngModel)]="slider.value"
+	[min]="slider.min"
+	[max]="slider.max"
+	[value]="slider.value"
+	[tickInterval]="slider.tickInterval"
+	(change)="slider.change($event)"
+></md-slider>
+
+<span style="padding-left : 20px">
+	<md-input-container>
+		<input mdInput type="number" [(ngModel)]="slider.value" (change)="slider.change()"/>
+	</md-input-container>
+</span>

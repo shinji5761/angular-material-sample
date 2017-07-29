@@ -17,7 +17,8 @@
 <!-- タッチインターフェース -->
 <md-input-container>
 	<input mdInput [mdDatepicker]="pickerTouch"/>
-	<button mdSuffix [mdDatepickerToggle]="pickerTouch"></button>
+	<!-- <button mdSuffix [mdDatepickerToggle]="pickerTouch"></button> -->
+	<md-icon mdSuffix (click)="pickerTouch.open()">home</md-icon>
 </md-input-container>
-<md-datepicker #pickerTouch touchUi="true"></md-datepicker>
-<button md-raised-button (click)="pickerTouch.open()">Open</button>
+ <md-datepicker #pickerTouch touchUi="true"></md-datepicker> 
+<button md-raised-button startView="Year" (click)="pickerTouch.open()">Open</button>

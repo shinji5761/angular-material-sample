@@ -1,0 +1,32 @@
+<md-select>
+	<md-option value="hello">Hello</md-option>
+</md-select>
+
+<br><br>
+
+<md-select placeholder="Month" [(ngModel)]="selectedMonth" >
+	<md-option *ngFor="let month of monthes" [value]="month">
+		{{month}}
+	</md-option>
+</md-select>
+
+<span style="padding-left : 10px">{{selectedMonth}}</span>
+
+<br><br>
+
+<md-select placeholder="State" [(ngModel)]="selectedStatus" multiple>
+	<md-option *ngFor="let status of statuses; let i = index" [value]="i">
+		{{status}}
+	</md-option>
+</md-select>
+
+<span style="padding-left : 10px">{{selectedStatus}}</span>
+
+<br><br>
+
+<md-select placeholder="Aはどれ" (onOpen)="selectOpen()" (onClose)="selectClose()" (change)="onChange($event)">
+	<md-option value="a1">A</md-option>
+	<md-option value="a2">a</md-option>
+	<md-option value="a3">α</md-option>
+</md-select>
+
