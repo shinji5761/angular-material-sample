@@ -1,0 +1,26 @@
+<md-slide-toggle>SlideToggle!</md-slide-toggle>
+
+<br><br>
+
+<md-slide-toggle labelPosition="before">label-before</md-slide-toggle>
+<md-slide-toggle labelPosition="after">label-after</md-slide-toggle>
+
+<br><br>
+
+<md-slide-toggle disableRipple="true">disableRipple!!</md-slide-toggle>
+
+<br><br>
+
+<md-slide-toggle checked="true">checked!!</md-slide-toggle>
+
+<br><br>
+
+<md-slide-toggle
+	[labelPosition]="toggle.position"
+	[disableRipple]="toggle.disableRipple"
+	[checked]="toggle.checked"
+	(change)="toggle.change()"
+>
+	{{toggle.name}}
+</md-slide-toggle>
+
