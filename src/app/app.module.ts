@@ -18,6 +18,7 @@ import {
 	MdSliderModule,
 	MdIconModule,
 	MdSlideToggleModule,
+	MdTooltipModule,
 	MD_PLACEHOLDER_GLOBAL_OPTIONS
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -33,6 +34,9 @@ import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select/select.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
 
 
 @NgModule({
@@ -47,7 +51,10 @@ import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
 		InputComponent,
 		SelectComponent,
 		SliderComponent,
-		SlidetoggleComponent
+		SlidetoggleComponent,
+		DialogComponent,
+		TooltipComponent,
+		SnackbarComponent
 	],
 	imports: [
 		BrowserModule,
@@ -64,6 +71,7 @@ import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
 		ReactiveFormsModule,
 		MdIconModule,
 		MdSlideToggleModule,
+		MdTooltipModule,
 		BrowserAnimationsModule
 	],
 	providers: [
