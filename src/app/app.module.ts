@@ -19,6 +19,7 @@ import {
 	MdIconModule,
 	MdSlideToggleModule,
 	MdTooltipModule,
+	MdDialogModule,
 	MD_PLACEHOLDER_GLOBAL_OPTIONS
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -37,6 +38,7 @@ import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
+import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 
 
 @NgModule({
@@ -54,7 +56,8 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 		SlidetoggleComponent,
 		DialogComponent,
 		TooltipComponent,
-		SnackbarComponent
+		SnackbarComponent,
+		HelloDialogComponent
 	],
 	imports: [
 		BrowserModule,
@@ -72,10 +75,14 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 		MdIconModule,
 		MdSlideToggleModule,
 		MdTooltipModule,
+		MdDialogModule,
 		BrowserAnimationsModule
 	],
 	providers: [
 		{provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: 'all' }}
+	],
+	entryComponents : [
+		HelloDialogComponent
 	],
 	bootstrap: [AppComponent]
 })
