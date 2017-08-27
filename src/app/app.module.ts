@@ -20,6 +20,7 @@ import {
 	MdSlideToggleModule,
 	MdTooltipModule,
 	MdDialogModule,
+	MdSnackBarModule,
 	MD_PLACEHOLDER_GLOBAL_OPTIONS
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -76,6 +77,7 @@ import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 		MdSlideToggleModule,
 		MdTooltipModule,
 		MdDialogModule,
+		MdSnackBarModule,
 		BrowserAnimationsModule
 	],
 	providers: [
